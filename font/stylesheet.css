@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('LouisGeorgeCafe.woff2') format('woff2'),
+        url('LouisGeorgeCafe.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Troika';
+    src: url('Troika.woff2') format('woff2'),
+        url('Troika.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
