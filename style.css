@@ -1,3 +1,315 @@
-* {
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("font/Roboto-Regular.woff2") format("woff2"),
+    url("font/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Norse";
+  src:
+    url("font/Norse-Bold.woff2") format("woff2"),
+    url("font/Norse-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.left {
+  position: relative;
+  width: 30.5%;
+  background-image: url("images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.left .logo-bg {
+  width: 100%;
+  height: 10em;
+  position: absolute;
+
+  top: 160px;
+
+  background-color: rgb(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left .logo-bg .logo-img img {
+  max-width: 100%;
+  height: 8em;
+}
+
+.left .logo-bg .logo-text {
+  font-family: "Norse";
+  font-size: 6em;
+
+  color: #ffffff;
+}
+
+.credits,
+a {
+  color: rgb(255, 255, 255, 0.7);
+}
+
+.credits {
+  font-family: "Roboto";
+
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  font-size: 0.7em;
+}
+
+.right {
+  font-family: "Roboto";
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  background-color: #f3f4f6;
+}
+
+.texts-container {
+  font-family: "Roboto";
+
+  font-size: 1.5em;
+  font-weight: bold;
+
+  margin-top: calc(21.8% - 8.45%);
+
+  padding-left: 3.19%;
+  padding-right: 13.04%;
+}
+
+.text-1 {
+  margin-bottom: 10px;
+}
+
+.text-2 {
+  margin-bottom: 50px;
+}
+
+.form {
+  background-color: #ffffff;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 3.19%;
+  padding-right: 13.04%;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: box-shadow 0.3s ease;
+
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+}
+
+.form .text {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.columns-wrapper {
+  display: flex;
+  gap: 40px;
+}
+
+.first-col,
+.second-col {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn-container {
+  padding-left: 3.19%;
+  padding-right: 13.04%;
+  margin-top: 20px;
+}
+
+.fname,
+.lname,
+.email,
+.tel,
+.pword,
+.conf-pass {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fname label,
+.lname label,
+.email label,
+.tel label,
+.pword label,
+.conf-pass label {
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #333;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.fname input,
+.lname input,
+.email input,
+.tel input,
+.pword input,
+.conf-pass input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  font-family: "Roboto";
+  width: 100%;
+
+  transition: all 0.2s ease-in-out;
+  background-color: #fff;
+}
+
+form .btn-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.primary-btn button {
+  background-color: #596d48;
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  padding: 12px 36px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 24px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(89, 109, 72, 0.2);
+}
+
+.secondary-btn button {
+  color: #596d48;
+  font-weight: 600;
+  border: none;
+  background: none;
+
+  cursor: pointer;
+
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-size: 0.95em;
+}
+
+.fname input:hover,
+.lname input:hover,
+.email input:hover,
+.tel input:hover,
+.pword input:hover,
+.conf-pass input:hover {
+  border-color: #4f46e5;
+}
+
+.fname input:focus,
+.lname input:focus,
+.email input:focus,
+.tel input:focus,
+.pword input:focus,
+.conf-pass input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+  background-color: #fff;
+}
+
+.email input:invalid:not(:focus):not(:placeholder-shown),
+.tel input:invalid:not(:focus):not(:placeholder-shown),
+.pword input:invalid:not(:focus):not(:placeholder-shown),
+.conf-pass input:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.fname:focus-within label,
+.lname:focus-within label,
+.email:focus-within label,
+.tel:focus-within label,
+.pword:focus-within label,
+.conf-pass:focus-within label {
+  color: #4f46e5;
+}
+
+.primary-btn button:hover {
+  background-color: #4a5c3c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(89, 109, 72, 0.3);
+}
+
+.primary-btn button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(89, 109, 72, 0.2);
+}
+
+.primary-btn button:focus {
+  outline: none;
+
+  box-shadow:
+    0 0 3px rgba(89, 109, 72, 0.3),
+    0 2px 4px rgba(89, 109, 72, 0.2);
+}
+
+.secondary-btn {
+  display: flex;
+  align-items: center;
+
+  color: #6b7280;
+  font-size: 0.95em;
+}
+
+.secondary-btn button:hover {
+  color: #4a5c3c;
+  background-color: rgba(89, 109, 72, 0.08);
+}
+
+.secondary-btn button:active {
+  background-color: rgba(89, 109, 72, 0.15);
+}
+
+.secondary-btn button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(89, 109, 72, 0.3);
 }
