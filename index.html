@@ -6,5 +6,107 @@
     <title>Project: Sign-up Form | The Odin Project</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="left">
+      <div class="logo-bg">
+        <div class="logo-img">
+          <img src="images/odin-lined.png" alt="odin logo" />
+        </div>
+        <div class="logo-text">ODIN</div>
+      </div>
+      <div class="credits">
+        Photo by
+        <a href="https://unsplash.com/@haliewestphoto" target="_blank"
+          >Halie West</a
+        >
+        on
+        <a
+          href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA"
+          target="_blank"
+          >Unsplash</a
+        >
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="texts-container">
+        <div class="text-1">
+          This is not real online service! You know you need something like this
+          in your life to help you realize your deepest dreams.<br />Sign up
+          <em>now</em> to get started.
+        </div>
+        <div class="text-2">You know you want to.</div>
+      </div>
+
+      <!-- The logical form wraps the white box AND the buttons -->
+      <form action="">
+        <!-- The visual white box ONLY wraps the inputs -->
+        <div class="form">
+          <div class="text">Let's do this!</div>
+          <div class="columns-wrapper">
+            <div class="first-col">
+              <div class="fname">
+                <label for="fname">FIRST NAME</label>
+                <input type="text" id="fname" required />
+              </div>
+              <div class="email">
+                <label for="mail">EMAIL</label>
+                <input
+                  type="email"
+                  id="mail"
+                  required
+                  placeholder="jessepinkman@example.com"
+                />
+              </div>
+              <div class="pword">
+                <label for="pword">PASSWORD</label>
+                <input
+                  type="password"
+                  id="pword"
+                  required
+                  minlength="8"
+                  placeholder="Use strong password"
+                />
+              </div>
+            </div>
+            <div class="second-col">
+              <div class="lname">
+                <label for="lname">LAST NAME</label>
+                <input type="text" id="lname" required />
+              </div>
+              <div class="tel">
+                <label for="tel">PHONE NUMBER</label>
+                <input
+                  type="tel"
+                  id="tel"
+                  minlength="11"
+                  placeholder="(09) 123 456 789"
+                />
+              </div>
+              <div class="conf-pass">
+                <label for="conf-pword">CONFIRM PASSWORD</label>
+                <input
+                  type="password"
+                  id="conf-pword"
+                  required
+                  minlength="8"
+                  placeholder="Confirm your password"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-container">
+          <div class="primary-btn">
+            <button type="submit">Create Account</button>
+          </div>
+          <div class="secondary-btn">
+            Already have an account?
+            <button type="button">Log in</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
