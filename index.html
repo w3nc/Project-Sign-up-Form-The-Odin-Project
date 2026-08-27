@@ -66,6 +66,8 @@
                   required
                   minlength="8"
                   placeholder="Use strong password"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&]).{8,}"
+                  title="Requires a minimum of 8 characters, including at least one uppercase letter, one lowercase letter, one number, and one special character"
                 />
               </div>
             </div>
@@ -80,7 +82,8 @@
                   type="tel"
                   id="tel"
                   minlength="11"
-                  placeholder="(09) 123 456 789"
+                  pattern="^(09\d{9}|\+639\d{9})$"
+                  placeholder="09XXXXXXXXX or +639XXXXXXXXX"
                 />
               </div>
               <div class="conf-pass">
